@@ -19,12 +19,12 @@ class All:
         for i in tqdm(variants):
             rsp = req.get("https://instagram.com/{}".format(i))
             if rsp == "<Response [200]>":
-                print("\r\t\t\t\033[1m\033[92m%s\tFREE\033[0m" % i)
+                # print("\r\t\t\t\033[1m\033[92m%s\tFREE\033[0m" % i)
                 free.append(i)
                 with open('instagram.3char.dump', 'a') as freedump:
                     freedump.write("FRE:" + i + "\n")
             else:
-                print("\t\t\t\033[91m%s\tTAKEN\033[0m" % i)
+                # print("\t\t\t\033[91m%s\tTAKEN\033[0m" % i)
                 with open('instagram.3char.dump', 'a') as freedump:
                     freedump.write("TAK:" + i + "\n")
 
@@ -32,12 +32,12 @@ class All:
         for i in tqdm(variants):
             rsp = req.get("https://github.com/{}".format(i))
             if rsp == "<Response [200]>":
-                print("\r\t\t\t\033[1m\033[92m%s\tFREE\033[0m" % i)
+                # print("\r\t\t\t\033[1m\033[92m%s\tFREE\033[0m" % i)
                 free.append(i)
                 with open('github.3char.dump', 'a') as freedump:
                     freedump.write("FRE:" + i + "\n")
             else:
-                print("\t\t\t\033[91m%s\tTAKEN\033[0m" % i)
+                # print("\t\t\t\033[91m%s\tTAKEN\033[0m" % i)
                 with open('github.3char.dump', 'a') as freedump:
                     freedump.write("TAK:" + i + "\n")
 
