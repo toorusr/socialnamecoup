@@ -15,6 +15,24 @@ class All:
         else:
             print("[D] Service id wrong")
 
+    def custom(c, start):
+        new = []
+        if c:
+            isstart = 0
+            for i in variants:
+                if i == start:
+                    isstart = 1
+                else: 
+                    pass
+                if isstart:
+                    new.append(i)
+        else:
+            new = variants
+
+        return new
+
+
+
     def instagram(self):
         for i in tqdm(variants):
             rsp = req.get("https://instagram.com/{}".format(i))
@@ -41,6 +59,7 @@ class All:
                 with open('github.3char.dump', 'a') as freedump:
                     freedump.write("TAK:" + i + "\n")
 
+print(All.custom(1, "wp1"))
 try:
     argv2 = sys.argv[1]
     if argv2 == "instagram" or "i" or "insta":
